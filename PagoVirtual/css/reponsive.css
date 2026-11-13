@@ -1,0 +1,43 @@
+@media (min-width: 600px) and (max-width: 800px){
+
+    body{
+        background-image: url('../imagen/cancha.png');
+        background-size: cover;   
+        background-position: center; 
+        background-repeat: no-repeat; 
+        background-attachment: fixed;
+        margin: 0;             
+        padding: 0;
+    }
+
+    nav ul{
+        width: 60%;        
+        margin: 0 auto;    
+        display: flex;
+        flex-direction: column; 
+        gap: 0.5rem;
+        padding: 0;
+    }
+
+    nav ul li{
+        width: 100%;       
+        text-align: center;
+    }
+
+    nav a{
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .dashboard, form, .caja{
+        width: 60%;       
+        margin: 1rem auto;  
+        padding: 15px;
+        box-sizing: border-box; 
+    }
+    h1, h2{
+        font-size: 1.5em; 
+        text-align: center;
+    }
+
+}

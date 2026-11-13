@@ -1,0 +1,55 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial,sans-serif;
+    background-image:url('../imagen/cancha.png');
+    background-size:cover;
+}
+
+header{
+   background: #006633;
+    border-bottom: 2px solid  #FFCC00;
+    color: #FFCC00;
+    padding:20px;
+    text-align:center;
+}
+
+nav{
+    background:#006633;
+    padding:15px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    list-style:none;
+}
+nav a{
+   display:inline-block;
+    color: black;
+    background: #FFCC00;;
+    text-decoration:none;
+    padding:10px 18px;
+    border:2px ;
+    border-radius:8px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+form{
+    background:white;
+    max-width:600px;
+    margin:30px auto;
+    padding:25px;
+    border-radius:15px;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}

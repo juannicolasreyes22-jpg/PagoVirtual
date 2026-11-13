@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomar asistencia | MiPagoVirtual</title>
+<link rel="icon" href="../imagen/logo.jpeg"><link rel="stylesheet" href="../css/app.css">
+</head>
+<body data-role="entrenador">
+<main>
+  <div class="page-heading"><div><div class="eyebrow">CONTROL DE ASISTENCIA</div><h1>Tomar asistencia</h1><p>Registrá quién asistió a cada entrenamiento.</p></div></div>
+  <section class="content-card"><h2>Registrar asistencia</h2><div class="form-grid"><div class="form-group"><label for="fechaAsistencia">Fecha</label><input id="fechaAsistencia" type="date" required></div><div class="form-group"><label for="actividadAsistencia">Actividad</label><select id="actividadAsistencia"><option>Fútbol Infantil</option><option>Fútbol Juvenil</option></select></div></div><p class="muted">Marcá el estado de cada jugador y guardá el registro de la jornada.</p><div class="table-wrap"><table><thead><tr><th>Jugador</th><th>Actividad</th><th>Asistencia</th></tr></thead><tbody id="tablaAsistencia"><tr><td colspan="3">No hay jugadores registrados. Primero deben realizar una inscripción.</td></tr></tbody></table></div><button class="btn" id="guardarAsistencia" type="button">Guardar asistencia</button><p id="mensajeAsistencia" class="muted" aria-live="polite"></p></section>
+<section class="content-card"><h2>Últimos registros</h2><div class="table-wrap"><table><thead><tr><th>Fecha</th><th>Jugador</th><th>Actividad</th><th>Estado</th></tr></thead><tbody id="historialAsistencia"><tr><td colspan="4">Todavía no hay asistencias guardadas.</td></tr></tbody></table></div></section>
+</main>
+<script src="../js/app.js"></script>
+</body>
+</html>

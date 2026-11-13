@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión | MiPagoVirtual</title>
+    <link rel="icon" href="imagen/logo.jpeg">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="login-page">
+        <section class="login-card">
+            <img src="imagen/logo.jpeg" class="login-logo" alt="Logo del club">
+            <h1>MiPagoVirtual</h1>
+            <p>Club Deportivo · Gestión de cuotas, inscripciones y pagos</p>
+            
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="usuario">Correo o DNI</label>
+                    <input id="usuario" required placeholder="Ingresá tu correo o documento">
+                </div>
+                
+                <div class="form-group">
+                    <label for="clave">Contraseña</label>
+                    <input id="clave" type="password" minlength="6" required placeholder="Mínimo 6 caracteres">
+                </div>
+                
+                <div class="form-group">
+                    <label for="rol">Ingresar como</label>
+                    <select id="rol">
+                        <option value="usuario">Usuario</option>
+                        <option value="entrenador">Entrenador</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+                </div>
+                
+                <button class="btn" type="submit">Ingresar al sistema →</button>
+            </form>
+            
+            <p class="login-note">Versión de demostración: el selector permite acceder a cada panel. La autenticación y los permisos reales requieren conectar el backend y la base de datos.</p>
+            <p><a href="registro.html">¿Todavía no tenés cuenta? Registrate</a></p>
+        </section>
+    </div>
+
+    <script>
+        document.body.classList.toggle('light', localStorage.getItem('mipv_theme') === 'light');
+        
+        document.getElementById('loginForm').addEventListener('submit', e => {
+            e.preventDefault();
+            const user = document.getElementById('usuario').value.trim();
+            const pass = document.getElementById('clave').value;
+            
+            if (pass.length < 6) {
+                alert('La contraseña debe tener al menos 6 caracteres.');
+                return;
+            }
+            
+            const role = document.getElementById('rol').value;
+            sessionStorage.setItem('mipv_role', role);
+            sessionStorage.setItem('mipv_name', user);
+            location.href = role + '/index.html';
+        });
+    </script>
+</body>
+</html>

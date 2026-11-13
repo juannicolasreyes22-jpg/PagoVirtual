@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background-image:url('../imagen/cancha.png');
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+header{
+  background: #006633;
+  border-bottom: 2px solid  #FFCC00;
+  color: #FFCC00;
+  padding:20px;
+  text-align:center;
+}
+
+
+main{
+    padding:30px;
+}
+
+.login-box{
+    background:white;
+    max-width:500px;
+    margin:auto;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 15px rgba(0,0,0,.3);
+}
+
+.logo{
+    width:120px;
+    display:block;
+    margin:auto;
+    margin-bottom:20px;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+.boton-verde{
+    background:green;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+}
+h2{
+    color: white;
+    text-align:center; 
+    font-size:1.7em;
+}

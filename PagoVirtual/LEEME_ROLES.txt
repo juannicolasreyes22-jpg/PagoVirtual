@@ -1,0 +1,18 @@
+MIPAGOVIRTUAL - ROLES SEPARADOS
+
+ESTRUCTURA
+- usuario/: panel y funciones del usuario (pagos, inscripciones, movimientos, actividades y calendario).
+- entrenador/: inscriptos, calendario, consulta de pagos, asistencia y actividades.
+- administrador/: usuarios, entrenadores, actividades, inscripciones, pagos y estadísticas.
+- css/app.css: se conserva el archivo de estilos original, sin cambios de colores ni diseño.
+- js/app.js: navegación por rol y datos de demostración compartidos en el navegador.
+
+PARA PROBAR
+1. Descomprimí la carpeta.
+2. Abrí index.html con un navegador.
+3. Ingresá un nombre cualquiera, una contraseña de al menos 6 caracteres y elegí el rol.
+4. Para probar los paneles, registrá un usuario y enviá una inscripción o un pago desde el rol Usuario.
+5. Cerrá sesión y entrá como Entrenador o Administrador para ver los registros.
+
+IMPORTANTE
+Esta versión es una demostración frontend. Los registros se guardan en localStorage del mismo navegador y equipo. No hay autenticación segura ni sincronización entre distintos dispositivos. Para uso real hay que conectar el backend con MySQL y validar permisos del lado del servidor. No se procesan pagos reales.

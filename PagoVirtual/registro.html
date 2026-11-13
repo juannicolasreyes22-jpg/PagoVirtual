@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro | MiPagoVirtual</title>
+    <link rel="icon" href="imagen/logo.jpeg">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+    <div class="login-page">
+        <section class="login-card">
+            <img src="imagen/logo.jpeg" class="login-logo" alt="Logo del club">
+            <h1>Crear cuenta</h1>
+            <p>Registrate para solicitar una actividad del club.</p>
+            
+            <form id="registroForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre y apellido</label>
+                    <input id="nombre" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dni">DNI</label>
+                    <input id="dni" required pattern="[0-9]{7,8}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input id="email" type="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input id="telefono" type="tel" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="clave">Contraseña</label>
+                    <input id="clave" type="password" minlength="6" required>
+                </div>
+                
+                <button class="btn" type="submit">Crear cuenta</button>
+            </form>
+            
+            <p class="login-note">
+                Registro de demostración. Para crear cuentas reales se necesita conectar la base de datos.
+            </p>
+            
+            <p>
+                <a href="index.html">Volver al inicio de sesión</a>
+            </p>
+        </section>
+    </div>
+
+    <script>
+        // Manejar el envío del formulario de registro
+        document.getElementById('registroForm').addEventListener('submit', e => {
+            e.preventDefault();
+            
+            const users = JSON.parse(localStorage.getItem('mipv_usuarios') || '[]');
+            const dni = document.getElementById('dni').value.trim();
+            
+            // Validar si ya existe un usuario registrado con ese DNI
+            if (users.some(u => u.dni === dni)) {
+                alert('Ya existe un registro con ese DNI.');
+                return;
+            }
+            
+            // Guardar el nuevo usuario de forma local (demostración)
+            users.push({
+                nombre: document.getElementById('nombre').value.trim(),
+                dni,
+                email: document.getElementById('email').value.trim(),
+                contacto: document.getElementById('telefono').value.trim(),
+                fecha: new Date().toLocaleDateString('es-AR')
+            });
+            
+            localStorage.setItem('mipv_usuarios', JSON.stringify(users));
+            alert('Registro de demostración guardado. Ahora podés iniciar sesión.');
+            
+            location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

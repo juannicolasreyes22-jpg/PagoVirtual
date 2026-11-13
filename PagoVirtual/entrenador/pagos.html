@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consulta de pagos | MiPagoVirtual</title>
+<link rel="icon" href="../imagen/logo.jpeg"><link rel="stylesheet" href="../css/app.css">
+</head>
+<body data-role="entrenador">
+<main>
+  <div class="page-heading"><div><div class="eyebrow">CONTROL DE CUOTAS</div><h1>Pagos de jugadores</h1><p>Consultá los pagos y las cuotas pendientes de los inscriptos.</p></div></div>
+  <section class="content-card"><h2>Estado de pagos de los jugadores</h2><p>Esta pantalla es de consulta. La aprobación, anulación o modificación de pagos corresponde al administrador.</p><div class="form-grid"><div class="form-group"><label for="buscarPago">Buscar jugador</label><input id="buscarPago" placeholder="Nombre o DNI"></div><div class="form-group"><label for="filtroPago">Estado</label><select id="filtroPago"><option value="">Todos</option><option>Pendiente</option><option>Pagado</option></select></div></div><div class="table-wrap"><table><thead><tr><th>Jugador</th><th>Concepto</th><th>Importe</th><th>Fecha</th><th>Estado</th></tr></thead><tbody id="tablaPagos"><tr><td colspan="5">Todavía no hay pagos cargados.</td></tr></tbody></table></div></section>
+</main>
+<script src="../js/app.js"></script>
+</body>
+</html>

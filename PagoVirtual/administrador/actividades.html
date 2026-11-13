@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administrar actividades | MiPagoVirtual</title>
+<link rel="icon" href="../imagen/logo.jpeg"><link rel="stylesheet" href="../css/app.css">
+</head>
+<body data-role="administrador">
+<main>
+  <div class="page-heading"><div><div class="eyebrow">OFERTA DEPORTIVA</div><h1>Actividades</h1><p>Creá y consultá las actividades que ofrece el club.</p></div></div>
+  <section class="content-card"><h2>Crear actividad</h2><form id="formActividad"><div class="form-grid"><div class="form-group"><label for="nombreActividad">Nombre</label><input id="nombreActividad" required placeholder="Ej. Fútbol Infantil"></div><div class="form-group"><label for="categoriaActividad">Categoría</label><input id="categoriaActividad" placeholder="Infantil / Juvenil"></div><div class="form-group"><label for="diasActividad">Días</label><input id="diasActividad" required placeholder="Lunes y miércoles"></div><div class="form-group"><label for="horarioActividad">Horario</label><input id="horarioActividad" required placeholder="17:00 a 18:30"></div><div class="form-group"><label for="lugarActividad">Lugar</label><input id="lugarActividad" required placeholder="Cancha principal"></div></div><button class="btn" type="submit">Agregar actividad</button></form></section><section class="content-card"><h2>Actividades del club</h2><div class="table-wrap"><table><thead><tr><th>Actividad</th><th>Categoría</th><th>Días</th><th>Horario</th><th>Lugar</th><th>Acción</th></tr></thead><tbody id="tablaActividadesAdmin"><tr><td colspan="6">Cargando actividades…</td></tr></tbody></table></div></section>
+</main>
+<script src="../js/app.js"></script>
+</body>
+</html>
