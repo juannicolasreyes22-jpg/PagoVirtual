@@ -1,13 +1,16 @@
 {
-  "name": "MI_PagoVirtual 1",
+  "name": "PagoVirtual 1",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "pagovirtual",
+    "supabase",
+    "vercel"],
+  "author": "Equipo PagoVirtual ",
   "license": "ISC",
   "type": "module"
 }

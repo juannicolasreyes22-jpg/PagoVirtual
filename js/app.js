@@ -67,3 +67,29 @@
   if($('#tablaEstadisticasPagos')){const p=read('pagos');render('tablaEstadisticasPagos',['Pendiente','Pagado','Rechazado'].map(s=>`<tr><td>${s}</td><td>${p.filter(x=>x.estado===s).length}</td></tr>`).join(''));}
   if($('#tablaEstadisticasInscripciones')){const p=read('inscripciones');render('tablaEstadisticasInscripciones',['Pendiente','Aprobada','Rechazada'].map(s=>`<tr><td>${s}</td><td>${p.filter(x=>(x.estado||'Pendiente')===s).length}</td></tr>`).join(''));}
 })();
+
+
+
+
+import { SUPABASE_URL, SUPABASE_ANON_KEY } from './api/supabase.js';
+
+// Inicializa el cliente de Supabase (asegúrate de incluir el script CDN de Supabase en tu HTML)
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+async function verificarConexion() {
+    try {
+        // Intenta traer los datos de una tabla existente en tu Supabase
+        const { data, error } = await supabase.from('usuarios').select('*');
+
+        if (error) {
+            console.error('❌ Error al conectar con Supabase:', error.message);
+        } else {
+            console.log('✅ ¡Conexión exitosa con Supabase! Datos obtenidos:', data);
+        }
+    } catch (err) {
+        console.error('❌ Error inesperado:', err);
+    }
+}
+
+// Ejecutar la prueba al cargar
+verificarConexion();
